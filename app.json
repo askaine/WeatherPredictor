@@ -15,10 +15,31 @@
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.askaine.weathervision"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "onnxruntime-react-native",
+      "expo-asset",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Weather Vision to access your camera to predict the weather."
+        }
+      ],
+	 ["expo-image-picker", { "photosPermission": "Allow Weather Vision to access your photos to analyze cloud images." }]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "fade7d46-52e8-416b-b951-d3741430a582"
+      }
     }
   }
 }
